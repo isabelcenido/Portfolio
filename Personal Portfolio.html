@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)file:///C:/Users/Isabel/My%20Projects/HTML/HTML%20Finals%20Project/Finals_Portfolio.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wgt@300;400;500;600;700;800;900%display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+:root{
+    --bg-color:#814dc5;
+    --second-bg-color:#5f5280;
+    --text-color:#fff;
+    --main-color:(#0ef);
+}
+body{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    color: var(--text-color);
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgb(83, 12, 163) 68%, rgb(138, 61, 209) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 20em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+a{
+    color: beige;
+    font-size: 1rem;
+    font-family: sans-serif;
+    text-decoration: none;
+    transition: .5s;
+}
+a:hover{
+    background-color: #a581ff5b;
+    box-shadow: 0px 0px 400px 86px #a481ff;
+    -webkit-box-shadow: 0px 0px 400px 86px #a481ff;
+    text-decoration: underline white ;
+}
+.home{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-content h3{
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: "Times-New-Roman";
+    font-size: 5rem;
+    position:absolute;
+    left: 15%;
+    top: 21%;
+    background: linear-gradient(90deg, #37047a, #290568);
+    background-size: 300%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate 10s linear infinite;
+    }
+@keyframes animate{
+        0%{
+            background-position: 0%;
+        }
+        50%{
+            background-position: 200%;
+        }
+        100%{
+            background-position: 400%;
+        }
+    }
+.home-content h1{
+    margin-top: -3rem;
+    font-size: 4rem;
+    position: relative;
+    font-weight: 700;
+    background: linear-gradient(#bcadd3,#47259e);
+    background-clip: text;
+    color: transparent;
+}
+.home-content p{
+    font-size: 1.3rem;
+    text-align: justify;
+}
+.home-img img{
+    width: 28vw;
+    top: 5rem;
+}
+.home-content .profile-box{
+    top: 17rem;
+    flex: 1 1 25rem;
+    background:linear-gradient(#5c3cad, #5f5474);
+    padding: 3rem 2rem 2rem;
+    border-radius: 3rem;
+    text-align: center;
+    color: bisque;
+    border: .3rem solid #7255bd;
+    transition: .5s ease;
+}
+.home-content .profile-box:hover{
+    border-color: #a77ef1;
+    transform: scale(1.02);
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.header.sticky{
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+}
+/*Navigation Bar*/
+.navigation{
+        background-color: #5a3c8f;
+        position: fixed;
+        padding-top: 1rem;
+        right: 0;
+        left: 0;
+        height: 60px;
+        margin: auto;
+        box-sizing: border-box;
+        -webkit-box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62) ;
+        -moz-box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62);
+        box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62);
+}
+.navigation a{
+    color: beige;
+    font-size: 1.1rem;
+    margin-left: 5rem;
+    font-family: sans-serif;
+    text-decoration: none;
+    transition: .5s;
+} 
+.navigation a.active{
+    color:#beaaf1;
+}
+/*About Content*/
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: linear-gradient(315deg, #466e85 3%, #443264 38%, rgb(19, 131, 123) 68%, rgb(93, 37, 145) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+.about-content h2{
+    font-size: 60px;
+    margin-bottom: 3%;
+    text-align: left;
+    line-height: 1;
+    background: linear-gradient(#9676e6,#d8d4df);
+    background-clip: text;
+    color: transparent;
+}
+.about-content .box{
+    position:relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, #8575b3,#5013c2, #6847a1);
+    animation: animate-border-top 2s linear infinite;
+}
+@keyframes animate-border-top{
+    0%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(50%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+.about-content p{
+    font-size: 1.3rem;
+    margin: 2rem 0 3rem;
+    text-align: justify;
+}
+.about-content .about-content-box{
+    flex: 1 1 30rem;
+    background:linear-gradient(#5c3cad, #5f5474);
+    padding: 1rem 2rem 10rem;
+    border-radius: 2rem;
+    text-align: center;
+    color: bisque;
+    border: .3rem solid #a481ff;
+    transition: .5s ease;
+}
+.about-content .about-content-box:hover{
+    border-color: #39167a;
+    transform: scale(1.02);
+}
+/*Project Contents*/
+.portfolio{
+    background: linear-gradient(315deg, #466e85 3%, #443264 38%, rgb(6, 63, 59) 68%, rgb(96, 78, 112) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+.portfolio .box{
+    position:relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, #8575b3,#5013c2, #6847a1);
+    animation: animate-border-top 2s linear infinite;
+}
+@keyframes animate-border-top{
+    0%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(50%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+.portfolio h2{
+    font-size: 60px;
+    margin-bottom: 3rem;
+    text-align: left;
+    line-height: 1.3;
+    background: linear-gradient(#9676e6,#d8d4df);
+    background-clip: text;
+    color: transparent;
+}
+.portfolio-container{
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.portfolio-container .portfolio-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+.portfolio-box img{
+    width: 100%;
+    transition: .5s ease-in;
+}
+.portfolio-box:hover img{
+    transform: scale(1.1);
+}
+.portfolio-box .portfolio-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(rgba(0, 0, 0, .1), #100720);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transform: .5s ease;
+}
+.portfolio-box:hover .portfolio-layer{
+    transform: translateY(0);
+}
+.portfolio-layer h4{
+    font-size: 4rem;
+    font-family: 'Times New Roman';
+    background: linear-gradient(#9373e6,#ffffff);
+    background-clip: text;
+    color: transparent;
+}
+.portfolio-layer p{
+    font-size: 1rem;
+    margin: .3rem 0 1rem;
+    text-align: justify;
+}
+.portfolio-layer button{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 125px;
+    height: 40px;
+    cursor: pointer;
+    color:blueviolet;
+    font-size: 14px;
+    border-radius: 1rem;
+    border: none;
+    position: relative;
+    background: #100720;
+    transition: 0.1s;
+}
+.portfolio-layer button:after{
+    content:'';
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.02%);
+    filter:blur(15px);
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.portfolio-layer button:active{
+    background: radial-gradient(circle farthest-corner at 10% 20%, rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.02%);
+    transition: 0.5s;
+}
+/*Contact Contents*/
+.contact{
+    background:linear-gradient(#100720);
+}
+.contact h2{
+    font-size: 60px;
+    margin-bottom: 3rem;
+    text-align: left;
+    line-height: 1.3;
+    background: linear-gradient(#9676e6,#d8d4df);
+    background-clip: text;
+    color: transparent;
+}
+.contact form button{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 125px;
+    height: 40px;
+    cursor: pointer;
+    color:blueviolet;
+    font-size: 14px;
+    border-radius: 1rem;
+    border: none;
+    position: relative;
+    background: #100720;
+    transition: 0.1s;
+}
+.contact form button:after{
+    content:'';
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.02%);
+    filter:blur(15px);
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.contact form button:active{
+    background: radial-gradient(circle farthest-corner at 10% 20%, rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.02%);
+    transition: 0.5s;
+}
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .input-box{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background:var(--second-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+.contact form .input-box input{
+    width: 49%;
+}
+.contact form textarea{
+    resize: none;
+}
+.contact .box{
+    position:relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, #8575b3,#5013c2, #6847a1);
+    animation: animate-border-top 2s linear infinite;
+}
+@keyframes animate-border-top{
+    0%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(50%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width: 991px){
+    .header{
+        padding: 2rem 3%;
+    }
+    section {
+        padding: 10rem 3% 2rem;
+    }
+}
+@media (max-width: 768px){
+    .header .navigation{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: #9c82c9;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    }
+}
+    </style>
+    <title>Personal Portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navigation">
+				<a href="file:///C:/Users/Isabel/My%20Projects/HTML/HTML%20Finals%20Project/Finals_Portfolio.html#home" class="active"><b>Home</b></a>
+				<a href="file:///C:/Users/Isabel/My%20Projects/HTML/HTML%20Finals%20Project/Finals_Portfolio.html#portfolio"><b>Projects</b></a>
+				<a href="file:///C:/Users/Isabel/My%20Projects/HTML/HTML%20Finals%20Project/Finals_Portfolio.html#about"><b>About Me</b></a>
+                <a href="file:///C:/Users/Isabel/My%20Projects/HTML/HTML%20Finals%20Project/Finals_Portfolio.html#contact"><b>Contacts</b></a>
+		</nav>
+    </header>
+    
+    <!--Home Section-->
+    <section class="home" id="home">
+            <div class="home-content">
+                <div class="wave">
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                </div>
+                <h3>Hi! Welcome to My Portfolio</h3><br><br><br><br><br><br><br><br><br><br><br><br>
+                <h1>Maria Isabel</h1><br><br><br>
+                <div class="profile-box">
+                <p>currently an Information Technology Student, who's interested about web and softwares developing.
+					I'm going to show you the projects that I've worked on and other details about myself.<br>
+                    <br>These are the List of skills that I have:
+                    </p><ul>
+                        <h2><li>Hard Working</li></h2><br>
+                        <h2><li>Creative</li></h2><br>
+                        <h2><li>Responsible</li></h2><br>
+                        <h2><li>Goal-Driven</li></h2><br>
+                    </ul>
+                <p></p>
+                </div>
+            </div>
+            <div class="home-img">
+                <img src="./Personal Portfolio_files/profile1.png" alt="">
+            </div>
+    </section>
+    <!--About Me-->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <div class="about-content-box"><br><br><br><br><br>
+                <p>
+                    Hi! I'm Sab, I lived in Brgy. Biga Tanza, Cavite and I was born on <i>May 19, 2003</i> so I am turning 21 this coming May 2024, I took Information Technology because I have Interest in web designing because I think It will improve my creativity and skills about programming. I still need to explore from web designing and how a programs that I used was developed and How it works.
+                    This is actually my first choice so I am going to give my best to achieve what I look forward from this program. Also, I graduated In Tanza National Trade School at Paradahan II and I took STEM Strand and graduated with High Honors. I started to have interest on computers when I was in Senior High, but I realize it too late because I was already in STEM strand instead of ICT so when I graduated I took the opportunity
+                    to take the program that I really want which is Information Technology.  
+                </p>
+            </div><br><br><br>
+        </div>
+    </section>
+    <!--Projects-->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Projects</h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="./Personal Portfolio_files/Practice Webpage.png" width="450px" height="500px" alt="">
+                <div class="portfolio-layer"><br><br><br><br>
+                    <h4>Student Details Form</h4><br><br><br><br>
+                    <p>
+                        <b>Description:</b> I worked on this one to practice the things that I learned about html, I did this student details form to be prepared for the upcoming major exam
+                        This Form that I made is to apply the lessons that I've learned so that I can Improve my programming skills and for me to easily remember the codes in html
+                        I just think of an example that this is looks like a student portal that has form and going to save on a database so this project would be more realistic<br><br>
+                        <button><a href="file:///C:/Users/Isabel/My%20Projects/HTML/Practice%20Webpage.html" target="_blank"><abbr title="Student Details Form"><b>Student Form</b></abbr></a><br></button>
+                        <br>
+                    </p>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="./Personal Portfolio_files/Survey.png" width="450px" height="500px" alt="">
+                <div class="portfolio-layer">
+                    <h4>Survey Form</h4>
+                    <p><br><br>
+                        <b>Description:</b> Survey Form, I made this project for applying the other tags, this is quite simple because
+                        I used this to practice the new tags that I've learned. I already applied some css codes that you can see in submit button<br><br><br><br>
+                        <button><a href="file:///C:/Users/Isabel/My%20Projects/HTML/HTML%20Finals%20Project/Cform.html" target="_blank"><abbr title="Survey Form"><b>Survey Form</b></abbr></a><br></button>
+                        <br>
+                    </p>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="./Personal Portfolio_files/SignUpForm.png" width="450px" height="475px" alt="">
+                <div class="portfolio-layer">
+                    <h4>Sign Up Form</h4>
+                    <p><br>
+                        <b>Description:</b> Sign Up Form, I made this project to explore and apply the CSS code for styling the html projects
+                        I already applied some css codes that you can see it from the designs of the form to make it more appealing for the users<br><br><br><br>
+                        <button><a href="file:///C:/Users/Isabel/My%20Projects/HTML/HTML%20Finals%20Project/SignUpForm.html" target="_blank"><abbr title="SignUp Form"><b>SignUp Form</b></abbr></a><br></button>
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Contacts-->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact Me</h2>
+        <form action="file:///C:/Users/Isabel/My%20Projects/HTML/HTML%20Finals%20Project/Finals_Portfolio.html#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Mobile Number">
+                <input type="text" placeholder="Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Enter your Message"></textarea>
+            <button type="submit" target="_blank"><b>Submit</b></button>
+        </form>
+    </section>
+    <a href="https:" rel="external" download="">Click here</a>
+    <script src="./Personal Portfolio_files/script.js.download"></script>
+
+</body></html>

@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Times-New-Roman';
+  }
+  
+  body {
+    font-family: "Times New Roman";
+    color: white;
+    background:#6e6781;
+  }
+    button{
+        width: 90px;
+        height: 30px;
+        cursor: pointer;
+        color:blueviolet;
+        font-size: 14px;
+        border-radius: 1rem;
+        border: none;
+        position: relative;
+        background: #100720;
+  }
+  .container {
+    max-width: 30rem;
+    margin: 5rem auto;
+    padding: 0px 5rem;
+    border: 2px solid;
+  }
+  
+  .main-heading {
+    font-size: 2rem;
+    margin: 2rem 0rem 1rem;
+    color: white;
+    text-align: center;
+  }
